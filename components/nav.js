@@ -2,10 +2,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 function nav() {
-    const inactiveLink = 'flex gap-1';
-    const activeLink = inactiveLink +' bg-white text-blue-900 rounded-l-lg';
-    const router = useRouter()
-    const {pathname} = router;
+  const inactiveLink = 'flex gap-1';
+  const activeLink = inactiveLink + ' bg-white text-blue-900 rounded-l-lg';
+  const router = useRouter()
+  const { pathname } = router;
   return (
     <aside className="text-white p-4 pr-0">
       <Link className="flex gap-1 mb-4 mr-4" href={"/"}>
@@ -65,6 +65,24 @@ function nav() {
           </svg>
 
           <span>Productos</span>
+        </Link>
+
+        {/*Categoria */}
+        <Link href={"/categoria"} className={pathname.includes('/categoria') ? activeLink : inactiveLink}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+          </svg>
+
+
+          <span>Categoria</span>
+        </Link>
+
+        {/*Marca */}
+        <Link href={"/marca"} className={pathname.includes('/marca') ? activeLink : inactiveLink}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+          </svg>
+          <span>Marca </span>
         </Link>
 
         {/*Ordenes */}

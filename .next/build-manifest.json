@@ -27,10 +27,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/productos.js"
     ],
+    "/productos/NuevoProducto": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/productos/NuevoProducto.js"
+    ],
     "/productos/editar/[...id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/productos/editar/[...id].js"
+    ],
+    "/productos/eliminar/[...id]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/productos/eliminar/[...id].js"
     ]
   },
   "ampFirstPages": []

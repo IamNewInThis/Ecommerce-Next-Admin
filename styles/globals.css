@@ -31,6 +31,35 @@ table.basic tr td{
     @apply border border-blue-200 p-1;
 }
 
-table.basic a{
-    @apply bg-blue-900 text-white text-sm py-1 px-2 rounded-md inline-flex gap-1;
+h1{
+    @apply text-blue-900 text-xl
+}
+
+/*BOTONES*/
+.btn-default, .btn-red{
+    @apply px-20 py-2 rounded-md
+}
+
+.btn-default{
+    @apply bg-green-500  text-white
+}
+
+.btn-red{
+    @apply bg-red-600 text-white
+}
+
+.btn-editar, .btn-eliminar{
+    @apply w-full
+}
+
+.btn-editar{
+    @apply bg-green-800 text-white text-sm py-1 px-2 rounded-md inline-flex gap-1;
+}
+
+.btn-eliminar{
+    @apply bg-red-800 text-white text-sm py-1 px-2 rounded-md inline-flex gap-1;
+}
+
+img{
+    max-width: 100%;
 }

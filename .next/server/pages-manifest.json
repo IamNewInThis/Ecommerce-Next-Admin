@@ -3,7 +3,10 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/productos/editar/[...id]": "pages/productos/editar/[...id].js",
-  "/api/productos": "pages/api/productos.js",
+  "/productos": "pages/productos.js",
   "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/productos": "pages/productos.js"
+  "/productos/NuevoProducto": "pages/productos/NuevoProducto.js",
+  "/api/upload": "pages/api/upload.js",
+  "/api/productos": "pages/api/productos.js",
+  "/productos/eliminar/[...id]": "pages/productos/eliminar/[...id].js"
 }

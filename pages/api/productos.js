@@ -17,25 +17,25 @@ export default async function handle(req, res) {
 
     //POST
     if (method === 'POST') {
-        const { nombre, categoria, precio, descripcion,imagen } = req.body;
+        const { nombre, categoria, precio, descripcion, imagen, marca} = req.body;
         const productoDoc = await Producto.create({
-            nombre, categoria, precio, descripcion, imagen
+            nombre, categoria, precio, descripcion, imagen, marca
         })
         res.json(productoDoc);
     }
 
     //PUT
     if (method === 'PUT') {
-        const { nombre, descripcion, categoria, precio, imagen, _id } = req.body;
-        console.log({imagen})
-        await Producto.updateOne({ _id }, { nombre, descripcion, categoria, precio, imagen });
+        const { nombre, categoria,descripcion, precio, imagen ,marca, _id } = req.body;
+        //console.log({marca})
+        await Producto.updateOne({ _id }, { nombre, categoria,descripcion, precio, imagen, marca });
         res.json(true)
     }
 
     //DELETE
     if (method === 'DELETE') {
         if (req.query?.id) {
-            await Producto.deleteOne({_id: req.query?.id });
+            await Producto.deleteOne({ _id: req.query?.id });
             res.json(true)
         }
     }
